@@ -3,16 +3,33 @@ body {
     background-color: rgb(19, 104, 19);
     color: rgb(114, 58, 21);
     display: grid;
+    margin: 0%;
 }
 
 h1 {
-    font-style: italic;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: repeating-radial-gradient(closest-side at 20px 20px, rgb(114, 58, 21), red, rgb(114, 58, 21));
     justify-self: center;
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: black;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+
+a:hover {
+    color: blue;
 }
 
 p {
     color: black;
-    background-color: blue;
+    background-color: white;
     text-align: center;
     border-color: black;
     border-style: solid;
@@ -45,7 +62,7 @@ p {
 }
 
 #start:hover {
-    background-color: blueviolet;
+    background-color: rgb(114, 58, 21);
 }
 
 #add {
@@ -61,12 +78,13 @@ p {
 }
 
 #add:hover {
-    background-color: blueviolet;
+    background-color: rgb(114, 58, 21);
 
 }
 
 img {
     position: relative;
+    max-height: 100px;
     /* animation-iteration-count: infinite; */
 }
 
