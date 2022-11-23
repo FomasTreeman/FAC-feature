@@ -6,9 +6,16 @@ function addTortoise() {
     var img = document.createElement("img");
     img.src = "/tortoise.png";
     img.setAttribute("id", "racer" + racerNum);
+    var div = document.createElement("div");
+    div.setAttribute("id", "container");
     var para = document.createElement("p");
     para.innerText = racers.push(racerNum);
-    document.querySelector(".racerContainer").appendChild(para);
+    var name = document.getElementById("name").value;
+    var h2 = document.createElement("h2");
+    h2.innerText = name;
+    div.appendChild(para);
+    div.appendChild(h2);
+    document.querySelector(".racerContainer").appendChild(div);
     document.querySelector(".racerContainer").appendChild(img);
     document.querySelector(".racerContainer").appendChild(document.createElement("hr"));
     console.log("added tortoiser racer");

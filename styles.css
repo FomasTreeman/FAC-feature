@@ -42,7 +42,20 @@ p {
 
 .racerContainer {
     background-color: rgb(114, 58, 21);
+}
 
+#container {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    padding-inline-start: 2rem;
+}
+
+input {
+    position: absolute;
+    left: 9vw;
 }
 
 #start {
@@ -77,7 +90,7 @@ p {
     width: 4rem;
     padding-inline: 1rem;
     padding-block: 0.85rem;
-    bottom: 5px;
+    /* bottom: 5px; */
     left: 5px;
 }
 
@@ -90,7 +103,7 @@ p {
 img {
     position: relative;
     max-height: 100px;
-    width: 25vw;
+    height: 8vh;
     /* animation-iteration-count: infinite; */
 }
 

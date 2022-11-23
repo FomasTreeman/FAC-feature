@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tortoise race</title>
-        <script src="./script.js"></script>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1>TORTOISE RACE</h1>
-        <div class="racerContainer">
-            <hr>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tortoise race</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>TORTOISE RACE</h1>
+    <div class="racerContainer">
+        <hr>
+        <div id="container">
             <p>1</p>
-            <img src="./tortoise.png" id="racer1" alt="racer1">
-            <hr>
-            <p>2</p>
-            <img src="./tortoise.png" id="racer2" alt="racer2">
-            <hr>
-            <p>3</p>
-            <img src="./tortoise.png" id="racer3" alt="racer3">
-            <hr>
+            <h2 id="name1"> Tom </h2>
         </div>
-        <button onclick="start()" id="start">START</button>
+        <img src="./tortoise.png" id="racer1" alt="racer1">
+        <hr>
+        <div id="container">
+            <p>2</p>
+            <h2 id="name1"> Sam</h2>
+        </div>
+        <img src="./tortoise.png" id="racer2" alt="racer2">
+        <hr>
+        <div id="container">
+            <p>3</p>
+            <h2 id="name1"> Stu </h2>
+        </div>
+        <img src="./tortoise.png" id="racer3" alt="racer3">
+        <hr>
+    </div>
+    <button onclick="start()" id="start">START</button>
+    <div id="container">
         <button onclick="addTortoise()" id="add"> + </button>
-        <a href="https://fomastreeman.github.io/FAC-Fortune/"> Want to see your fortune? </a>
-    </body>
+        <input type="text" id="name" onfocus=this.value=''> 
+    </div>
+    <a href="https://fomastreeman.github.io/FAC-Fortune/"> Want to see your fortune? </a>
+</body>
+
 </html>
