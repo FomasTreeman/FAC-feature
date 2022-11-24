@@ -51,11 +51,16 @@ p {
 
 h2 {
     padding-inline-start: 2rem;
+    color: aliceblue;
 }
 
-input {
-    position: absolute;
-    left: 9vw;
+label {
+    color: aliceblue;
+
+}
+
+input, label {
+    margin-inline: 0.5rem;
 }
 
 #start {
@@ -80,18 +85,15 @@ input {
 }
 
 #add {
-    position: relative;
     color: black;
     background-color: yellow;
     border-color: black;
     border-style: solid;
     border-width: 2px;
     border-radius: 25px;
-    width: 4rem;
-    padding-inline: 1rem;
+    width: 3rem;
     padding-block: 0.85rem;
     /* bottom: 5px; */
-    left: 5px;
 }
 
 #add:hover {
@@ -102,17 +104,15 @@ input {
 
 img {
     position: relative;
-    max-height: 100px;
     height: 8vh;
-    /* animation-iteration-count: infinite; */
 }
 
 @keyframes racing {
     0% {
         left:0%;
     }
-    50% {
-        left: 75%;
+    100% {
+        left: calc(100vw - (8vh * 1.637));
     }
 
 }

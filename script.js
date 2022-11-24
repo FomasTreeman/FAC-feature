@@ -24,11 +24,10 @@ function addTortoise() {
 function start() {
     console.log("started");
     let speeds = racers.map((racer) => setSpeed(racer))
-    
-    console.log(speeds);
+    console.log(speeds, Math.max(...speeds));
     setTimeout(() => {
         alert("racer " + (speeds.indexOf(Math.min(...speeds)) + 1)  + " won!");
-    }, 7000);
+    }, Math.max(...speeds) * 1000);
 }
 
 
@@ -36,7 +35,8 @@ function setSpeed(num) {
     let speed = ((Math.random() * 4) + 3); 
     let currentRacer =  document.getElementById("racer" + num);
     currentRacer.style.animation = "";
-    setTimeout( function(){
+    setTimeout( function(){5
+        console.log(speed);
         currentRacer.style.animation="racing " + speed +"s linear";
     }, 10);
     return speed;
