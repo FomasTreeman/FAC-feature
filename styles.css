@@ -40,6 +40,50 @@ p {
     margin-left: 1rem;
 }
 
+#card {
+    position: fixed;
+    top: 20vh;
+    left: 30vw;
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 20px;
+    width: 40vw;
+    height: 30vh;
+    animation: bounceIn 2s linear;
+    z-index: 99;
+}
+
+#winner {
+    text-align: center;
+    font-size: 4vw;
+    padding: 0px;
+    margin-top: 3rem;
+    z-index: 98;
+}
+
+#reset {
+    position: absolute;
+    font-family: inherit;
+    font-size: 2vw;
+    bottom: 5vh;
+    left: calc(50% - 30px);
+    border: none;
+    border-radius: 5px;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    background-color: aquamarine;
+}
+
+#blur {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 98;
+}
+
 .racerContainer {
     background-color: rgb(114, 58, 21);
 }
@@ -112,7 +156,24 @@ img {
         left:0%;
     }
     100% {
-        left: calc(100vw - (8vh * 1.637));
+        left: calc(100vw - ((8vh * 1.637) + 20px));
     }
 
 }
+
+@keyframes bounceIn {
+    0% { 
+       opacity: 0; 
+       transform: scale(.3);
+    }
+    50% { 
+       opacity: 1;
+       transform: scale(1.05);
+    }
+    70% {
+       transform: scale(.9);
+    }
+    100% {
+       transform: scale(1);
+    }
+ } 

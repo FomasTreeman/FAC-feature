@@ -1,10 +1,24 @@
 var racers = [1, 2, 3];
 let winner = 0;
 
+document.addEventListener("keypress", (event) => {if (event.key == "Enter") start(); console.log(event.key)})
+
+function closeCard() {
+    let card = document.getElementById("card");
+    let blur = document.getElementById("blur");
+    let images = document.querySelectorAll("img");
+    images.forEach(element => { 
+        element.style.animationFillMode = "none";
+    });
+    card.style.display = "none";
+    blur.style.display = "none";
+}
+
 function addTortoise() {
     const racerNum = racers.length + 1;
     var img = document.createElement("img");
-    img.src = "/tortoise.png";
+    img.src = "./tortoise.png";
+    console.log(img);
     img.setAttribute("id", "racer" + racerNum);
     var div = document.createElement("div");
     div.setAttribute("id", "container");
@@ -24,20 +38,27 @@ function addTortoise() {
 function start() {
     console.log("started");
     let speeds = racers.map((racer) => setSpeed(racer))
+    let card = document.getElementById("card");
+    let blur = document.getElementById("blur");
     console.log(speeds, Math.max(...speeds));
     setTimeout(() => {
-        alert("racer " + (speeds.indexOf(Math.min(...speeds)) + 1)  + " won!");
+        console.log("winner");
+        blur.style.display = "block";
+        card.style.display = "block";
+        document.getElementById("winner").innerHTML = "racer " + (speeds.indexOf(Math.min(...speeds)) + 1) + " won!";
+        // alert("racer " + (speeds.indexOf(Math.min(...speeds)) + 1) + " won!");
     }, Math.max(...speeds) * 1000);
 }
 
 
 function setSpeed(num) {
-    let speed = ((Math.random() * 4) + 3); 
-    let currentRacer =  document.getElementById("racer" + num);
+    let speed = ((Math.random() * 4) + 3);
+    let currentRacer = document.getElementById("racer" + num);
     currentRacer.style.animation = "";
-    setTimeout( function(){5
-        console.log(speed);
-        currentRacer.style.animation="racing " + speed +"s linear";
+    setTimeout(function () {
+        currentRacer.style.animation = "racing " + speed + "s linear";
+        currentRacer.style.animationFillMode = "forwards";
+
     }, 10);
     return speed;
 }

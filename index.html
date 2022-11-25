@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tortoise race</title>
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <h1>TORTOISE RACE</h1>
+    <span id="blur" ></span>
+    <div id="card" style="display: none">
+        <h2 id="winner"></h2>
+        <button id="reset" onclick="closeCard()"> reset </button>
+    </div>
     <div class="racerContainer">
         <hr>
         <div id="container">
@@ -40,6 +44,7 @@
         <button onclick="addTortoise()" id="add"> + </button>
     </div>
     <a href="https://fomastreeman.github.io/FAC-Fortune/"> Want to see your fortune? </a>
+    <script src="./script.js"></script>
 </body>
 
 </html>
